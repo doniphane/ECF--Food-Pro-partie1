@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoodPro - Catalogue des plats</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>FoodPro</h1>
+    </header>
+
+    <div class="banner">
+      <h2>Catalogue des plats</h2>
+    </div>
+
+    <div class="filters-container">
+      <div class="search-section">
+        <label for="search">Rechercher</label>
+        <input type="text" id="search" placeholder="Nom du plat..." />
+      </div>
+
+      <div class="categories-section">
+        <label>Catégories</label>
+        <div class="buttons-group">
+          <button class="category-btn active" data-category="all">
+            Toutes
+          </button>
+          <button class="category-btn" data-category="entrees">Entrées</button>
+          <button class="category-btn" data-category="plats">Plats</button>
+        </div>
+        <button class="category-btn2" data-category="desserts">Desserts</button>
+      </div>
+
+      <div class="sort-section">
+        <label>Trier par prix</label>
+        <div class="buttons-group">
+          <button class="sort-btn active" data-sort="default">Défaut</button>
+          <button class="sort-btn" data-sort="asc">Prix +</button>
+          <button class="sort-btn" data-sort="desc">Prix -</button>
+        </div>
+      </div>
+
+      <div class="display-section">
+        <label>Plats à afficher</label>
+        <div class="slider-container">
+          <input
+            type="range"
+            min="1"
+            max="12"
+            value="12"
+            class="slider"
+            id="display-count"
+          />
+          <span id="display-value">12</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="separator"></div>
+
+    <main>
+      <h2>Notre Catalogue</h2>
+      <br />
+      <br />
+      <p id="dishes-count">Affichage de 12 plats</p>
+
+      <div id="dishes-container" class="dishes-container"></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
